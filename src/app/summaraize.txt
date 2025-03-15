@@ -1,0 +1,64 @@
+"use client"
+import { Product, topCategory } from '@/app/product/TopCategory'
+
+import { useParams } from 'next/navigation';
+
+
+
+import React from 'react'
+
+function page() {
+  // const { slug } = params;
+  const params = useParams()
+  const slug = params.slug
+    let detFilter = Product.filter(a=>a.category==slug)
+    console.log(detFilter.title)
+  return (
+    <>
+     <section>
+       <div className="container">
+        {detFilter.map(a=>(
+          <div key={a.id}>
+            <h2>hello{a.title}</h2>
+            </div>
+        ))}
+       </div>
+     </section>
+    </>
+  )
+}
+
+export default page
+
+//another method  are provide error becasue it is not async 
+
+"use client"
+import { Product, topCategory } from '@/app/product/TopCategory'
+
+import { useParams } from 'next/navigation';
+
+
+
+import React from 'react'
+
+function page({params}) {
+  const { slug } = params;
+
+    let detFilter = Product.filter(a=>a.category==slug)
+    console.log(detFilter.title)
+  return (
+    <>
+     <section>
+       <div className="container">
+        {detFilter.map(a=>(
+          <div key={a.id}>
+            <h2>hello{a.title}</h2>
+            </div>
+        ))}
+       </div>
+     </section>
+    </>
+  )
+}
+
+export default page
