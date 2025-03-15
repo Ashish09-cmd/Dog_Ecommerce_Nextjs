@@ -3,7 +3,7 @@ import React from 'react'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
+// import Image from 'next/image';
 
 
 
@@ -34,6 +34,7 @@ function Hiro() {
                 <a href="#" className='px-4 py-1 text-center  bg-orange rounded-full w-30 text-white text-2xl font-medium inline-block'>Shop</a>
               </div>
               <div className='hiro-img flex justify-center mt-6' >
+               
                 <img  src='https://static.vecteezy.com/system/resources/previews/044/274/398/non_2x/woman-with-2-pet-dogs-on-isolated-transparent-background-free-png.png' alt="" />
               </div>
             </div>
@@ -53,7 +54,8 @@ function Hiro() {
                 <a href="#" className='px-4 py-1 text-center  bg-orange rounded-full w-30 text-white text-2xl font-medium inline-block'>Shop</a>
               </div>
               <div className='hiro-img flex justify-center mt-6' >
-                <img className='rounded-lg'  src='https://helpx.adobe.com/content/dam/help/en/photoshop/using/quick-actions/remove-background-before-qa1.png' alt="" />
+              <img src="/hiro.png" alt="" />
+                {/* <img className='rounded-lg'  src='https://helpx.adobe.com/content/dam/help/en/photoshop/using/quick-actions/remove-background-before-qa1.png' alt="" /> */}
               </div>
             </div>
             </div>
